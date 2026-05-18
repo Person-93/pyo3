@@ -2145,7 +2145,7 @@ impl<T> Py<T> {
     ///
     /// `ptr` must point to an owned Python object type T.
     #[inline(always)]
-    unsafe fn from_non_null(ptr: NonNull<ffi::PyObject>) -> Self {
+    pub(crate) unsafe fn from_non_null(ptr: NonNull<ffi::PyObject>) -> Self {
         Self(ptr, PhantomData)
     }
 

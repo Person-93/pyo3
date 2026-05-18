@@ -19,6 +19,7 @@ use core::{cell::UnsafeCell, marker::PhantomData, mem::MaybeUninit};
 use std::sync::{Once, OnceState};
 
 pub mod critical_section;
+pub(crate) mod once_atomic;
 pub(crate) mod once_lock;
 
 /// Deprecated alias for [`pyo3::sync::critical_section::with_critical_section`][crate::sync::critical_section::with_critical_section]
